@@ -39,8 +39,10 @@ class TestCalc(unittest.TestCase):
         self.assertEqual(simple_calc.evaluate("*", -1, -11), 11)
         self.assertEqual(simple_calc.evaluate("*", -12, 4), -48)
         self.assertEqual(simple_calc.evaluate("*", 0, 12), 0)
-        self.assertRaises(ArithmeticError, simple_calc.evaluate, "*", 0, 0)
-    
+        
+        with self.assertRaises(ArithmeticError):
+            simple_calc.evaluate("*", 0, 0)
+
     def test_evaluate_div(self):
         
         self.assertEqual(simple_calc.evaluate("/", 4, 6), (4/6))
