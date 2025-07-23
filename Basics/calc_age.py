@@ -22,12 +22,13 @@ def get_year(prompt: str)-> int:
     
     return year
 
-"""
-Given a year as input.
-Calculate the years from the current year and return
-the result.
-"""
+
 def calculate_age(year: int)-> int:
+    """
+    Given a year as input.
+    Calculate the years from the current year and return
+    there result.
+    """
     return datetime.now().year - year
 
 
