@@ -35,6 +35,8 @@ def evaluate(operator, number1, number2):
         case '-':
             return number1 - number2
         case '*':
+            if number1 == 0 and number2 == 0:
+                raise ArithmeticError
             return number1 * number2
         case '/':
             return number1 / number2
@@ -72,6 +74,8 @@ def main():
                 print("Error: division by zero!")
             except ValueError:
                 print("Invalid operator!")
+            except ArithmeticError:
+                print("Invalid multiplication 0*0!")
             else:
                 print(f"{number1} {operator} {number2} = {result}\n")
 
