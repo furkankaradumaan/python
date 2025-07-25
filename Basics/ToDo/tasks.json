@@ -1,0 +1,10 @@
+{
+    "tasks": [
+        {
+            "id": 1,
+            "task": "Find a job immediately.",
+            "deadline": "2025-07-30",
+            "completed": false
+        }
+    ]
+}
